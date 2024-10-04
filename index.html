@@ -15,7 +15,22 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+
+   <!-- Picture element for responsive images -->
+   <picture>
+    <!-- Lanscape images for smaller than 960px -->
+    <source media="(max-width: 959px)" srcset="images/museum-320_X_240.jpg 320w,
+                                                  images/museum-480_X_360.jpg 480w,
+                                                  images/museum-720_X_540.jpg 720w">
+    <!-- Square images for larger than or equal to 960px -->
+    <source media="(min-width: 960px)" srcset="images/museum-960_X_960.jpg 960w,
+                                                images/museum-1280_X_1280.jpg 1280w,
+                                                images/museum-1600_X_1600.jpg 1600w">
+    <!-- 備用圖像 -->
+    <img src="images/museum-320_X240.jpg" alt="Museum Image" class="responsive-image">
+  </picture>
+
+    
 
   </header>
 </body>
