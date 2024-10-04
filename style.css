@@ -29,13 +29,19 @@ h4 {
   font-weight: 300;
 }
 
-img {
+.responsive-image{
   display: block;
   max-width: 100%;
   height:auto;
 }
 
+/* Styles for square images when the viewport is 960px or larger */
 @media (min-width: 960px) {
+  .responsive-image {
+    width: 100%; /* Makes the image take full width */
+    height: auto; /* Adjusts the height to maintain aspect ratio */
+  }
+
   .header {
     grid-template-columns: repeat(2, 1fr);
   }
